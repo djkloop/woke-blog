@@ -9,6 +9,10 @@ import {
   transformerVariantGroup,
 } from 'unocss'
 
+import { footerLinks } from "./site.config"
+
+const icons = [...footerLinks.map(x => x.icon)]
+
 export default defineConfig({
   shortcuts: [
     { 'text-color-primary-base': 'cursor-pointer transition-all hover:(color-primary transition-duration-150 transition-property-color)' },
@@ -34,4 +38,7 @@ export default defineConfig({
     transformerDirectives(),
     transformerVariantGroup(),
   ],
+  safelist: [
+    ...icons
+  ]
 })

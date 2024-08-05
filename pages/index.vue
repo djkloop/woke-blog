@@ -3,11 +3,9 @@
 </script>
 
 <template>
-  <section>
-    <h1>Hello World</h1>
-    <AppAlert>
-      This is an auto generated alert
-    </AppAlert>
+  <section flex flex-col gap-y-4>
+    <!-- 首页轮播图 -->
+    <HomeSwiper />
   </section>
 </template>
 
