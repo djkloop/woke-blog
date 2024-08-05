@@ -17,10 +17,12 @@ for (const path in allImages) {
   <section id="WoKeHomeSwiper">
     <TSwiper class="h300px overflow-hidden rounded-sm" trigger="click" :navigation="{ showSlideBtn: 'hover' }">
       <TSwiperItem v-for="(img) in imgs" :key="img" class="relative h300px bg-black">
-        <img
-          class="h300px w-full object-cover"
+        <TImage
+          class="h300px w-full"
           :src="img"
-        >
+          lazy
+          fit="cover"
+        />
       </TSwiperItem>
     </TSwiper>
   </section>
