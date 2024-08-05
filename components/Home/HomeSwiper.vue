@@ -1,24 +1,27 @@
 <script setup lang="ts">
 const imgs = shallowRef<any>([])
-const allImages = shallowRef<any>({})
 
-for (const path in allImages.value) {
-  const module = allImages.value[path]
-  imgs.value.push(module)
+const allImages = import.meta.glob('/public/images/home/banner/*.{png,jpg}', {
+  query: '?url',
+  import: 'default',
+  eager: true,
+})
+
+for (const path in allImages) {
+  const module = allImages[path] as any
+  imgs.value.push(module.replace('/_nuxt/public/', ''))
 }
 </script>
 
 <template>
   <section id="WoKeHomeSwiper">
-    <t-swiper class="h300px overflow-hidden rounded-sm" trigger="click" :navigation="{ showSlideBtn: 'hover' }">
-      <t-swiper-item v-for="(img) in imgs" :key="img" class="relative h300px bg-black">
-        <t-image
-          lazy
-          class="h300px w-full"
+    <TSwiper class="h300px overflow-hidden rounded-sm" trigger="click" :navigation="{ showSlideBtn: 'hover' }">
+      <TSwiperItem v-for="(img) in imgs" :key="img" class="relative h300px bg-black">
+        <img
+          class="h300px w-full object-cover"
           :src="img"
-          fit="cover"
-        />
-      </t-swiper-item>
-    </t-swiper>
+        >
+      </TSwiperItem>
+    </TSwiper>
   </section>
 </template>
