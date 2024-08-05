@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const imgs = shallowRef<any>([])
-
 const allImages = shallowRef<any>({})
 
 for (const path in allImages.value) {
