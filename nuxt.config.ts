@@ -8,18 +8,18 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@vueuse/nuxt',
     '@nuxt/image',
-    "@nuxt/content",
-    "@tdesign-vue-next/nuxt",
-    "@nuxt/eslint"
+    '@nuxt/content',
+    '@tdesign-vue-next/nuxt',
+    '@nuxt/eslint',
   ],
   devtools: { enabled: true },
   css: [
-    '~/assets/main.css'
+    '~/assets/main.css',
   ],
   eslint: {
     config: {
-      standalone: false
-    }
+      standalone: false,
+    },
   },
-  ssr: true
+  ssr: true,
 })

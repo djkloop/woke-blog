@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import 'tdesign-vue-next/es/style/index.css'
+import '~/assets/theme.css'
 
 const colorMode = useColorMode()
 
