@@ -14,6 +14,6 @@ export const footerLinks = [
 
 export const blogInfos = {
   title: '蜗壳',
-  logoUrl: '/logo/logo_wk_x.png',
+  logoUrl: 'logo/logo_wk_x.png',
   description: '讲文明，树新风，扬正气，促和谐，谱新篇。'
 }

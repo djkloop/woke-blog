@@ -1,9 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
-  image: {
-    dir: 'assets/images'
-  },
   modules: [
     'dayjs-nuxt',
     '@unocss/nuxt',
