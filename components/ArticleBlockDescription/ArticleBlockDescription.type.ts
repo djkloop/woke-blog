@@ -5,4 +5,5 @@ export interface IArticleBlockDescriptionProps {
   tags: number[]
   createTime: string
   isPin: boolean
+  path: string
 }

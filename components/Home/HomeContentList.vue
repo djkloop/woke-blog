@@ -11,9 +11,11 @@ const computedPosts = computed(() => {
       id: post._id,
       title: post.title,
       content: post.description,
-      createTime: dayjs(post.date).format('YYYY-MM-DD'),
+      createTime: dayjs(post.date).format('YYYY-MM-DD HH:MM:ss'),
       tags: post.tags,
       isPin: post.isPin,
+      path: post._path,
+
     }
   })
 })
@@ -28,6 +30,7 @@ const computedPosts = computed(() => {
       :content="item.content"
       :tags="item.tags"
       :is-pin="item.isPin"
+      :path="item.path"
       :create-time="item.createTime"
     />
   </div>

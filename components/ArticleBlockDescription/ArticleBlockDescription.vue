@@ -3,13 +3,14 @@ import type { IArticleBlockDescriptionProps } from './ArticleBlockDescription.ty
 import { articleRandomTag, articleTags } from '@/utils/constant'
 import { getRandomOption } from '@/utils/utils'
 
-const { isPin, title, tags, createTime, content } = withDefaults(defineProps<IArticleBlockDescriptionProps>(), {
+const { isPin, title, tags, createTime, content, path } = withDefaults(defineProps<IArticleBlockDescriptionProps>(), {
   isPin: false,
   title: '无',
   tags: () => [],
   content: '无',
   createTime: '无',
   isShow: false,
+  path: '',
 })
 
 const computedTag = computed(() => {
@@ -49,51 +50,56 @@ const computedReadContentTime = computed(() => {
 </script>
 
 <template>
-  <div
-    :border="`1px solid ${isPin ? 'indigo-5' : 'coolGray-2'}`"
-    flex
-    flex-col
-    gap-y-6
-    rounded-sm
-    p4
+  <NuxtLink
+    :to="`posts${path}`"
+    class="color-slate-8 decoration-none !underline-none"
   >
     <div
-      class="line-clamp-1 break-all text-xl font-bold tracking-0.3 text-color-primary-base"
-      :class="{
-        'text-color-primary-base-pin': isPin,
-      }"
-      :title="title"
+      :border="`1px solid ${isPin ? 'indigo-5' : 'coolGray-2'}`"
+      flex
+      flex-col
+      gap-y-6
+      rounded-sm
+      p4
     >
-      {{ title }}
-    </div>
-    <p class="cursor-pointer tracking-0.3" line-clamp-2 break-all indent-md color-gray-4>
-      {{ content }}
-    </p>
-    <div flex items-center justify-between color-gray-4>
-      <div class="flex items-center text-sm">
-        <span
-          :color="`${isPin ? 'indigo-5' : 'primary'}`"
-        >{{ computedTags }}</span>
-        <span class="mx-2">·</span>
-        <div flex items-center justify-center gap-x-1>
-          <span class="i-hugeicons-clock-01" role="img" aria-hidden="true" />
-          <span>{{ computedReadContentTime }}</span>
-        </div>
-        <span class="mx-2">·</span>
-        <span>{{ createTime }}</span>
-      </div>
       <div
-        :border="`1px solid ${isPin ? 'indigo-5' : 'primary'}`"
-        :color="`${isPin ? 'indigo-5' : 'primary'}`"
-        p="x1"
-        rounded-sm
-        text-xs
+        class="line-clamp-1 break-all text-xl font-bold tracking-0.3 text-color-primary-base"
+        :class="{
+          'text-color-primary-base-pin': isPin,
+        }"
+        :title="title"
       >
-        <span v-if="isPin">置顶</span>
-        <span v-else>{{ computedTag }}</span>
+        {{ title }}
+      </div>
+      <p class="cursor-pointer tracking-0.3" line-clamp-2 break-all indent-md color-gray-4>
+        {{ content }}
+      </p>
+      <div flex items-center justify-between color-gray-4>
+        <div class="flex items-center text-sm">
+          <span
+            :color="`${isPin ? 'indigo-5' : 'primary'}`"
+          >{{ computedTags }}</span>
+          <span class="mx-2">·</span>
+          <div flex items-center justify-center gap-x-1>
+            <span class="i-hugeicons-clock-01" role="img" aria-hidden="true" />
+            <span>{{ computedReadContentTime }}</span>
+          </div>
+          <span class="mx-2">·</span>
+          <span>{{ createTime }}</span>
+        </div>
+        <div
+          :border="`1px solid ${isPin ? 'indigo-5' : 'primary'}`"
+          :color="`${isPin ? 'indigo-5' : 'primary'}`"
+          p="x1"
+          rounded-sm
+          text-xs
+        >
+          <span v-if="isPin">置顶</span>
+          <span v-else>{{ computedTag }}</span>
+        </div>
       </div>
     </div>
-  </div>
+  </NuxtLink>
 </template>
 
 <style scoped>
