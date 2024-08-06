@@ -20,7 +20,6 @@ for (const path in allImages) {
         <TImage
           class="h300px w-full"
           :src="img"
-          lazy
           fit="cover"
         />
       </TSwiperItem>
