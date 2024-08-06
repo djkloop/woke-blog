@@ -21,4 +21,4 @@ console.log('4') // 高亮
 
 #### 我这张图片是本地的...
 
-![image](/public/images/logo/logo_wk.png)
+![image](/images/logo/logo_wk_x.png)

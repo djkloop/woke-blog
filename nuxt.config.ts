@@ -7,7 +7,6 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@pinia/nuxt',
     '@vueuse/nuxt',
-    '@nuxt/image',
     '@nuxt/content',
     '@tdesign-vue-next/nuxt',
     '@nuxt/eslint',
@@ -16,6 +15,24 @@ export default defineNuxtConfig({
   css: [
     '~/assets/main.css',
   ],
+  content: {
+    highlight: {
+      theme: {
+        // Default theme (same as single string)
+        default: 'vitesse-light',
+        // Theme used if `html.dark`
+        dark: 'vitesse-dark',
+        // Theme used if `html.sepia`
+        sepia: 'monokai',
+      },
+      preload: [
+        'c',
+        'cpp',
+        'java',
+      ],
+
+    },
+  },
   eslint: {
     config: {
       standalone: false,
