@@ -1,9 +1,20 @@
-import { useDayjs } from '#dayjs'
-
 export function insertCurrentYearToPosts(posts: any) {
-  const dayjs = useDayjs()
-  const year = dayjs().format('YYYY')
-  console.log('🚀 ~ insertCurrentYearToPosts ~ year:', year)
+  let currentYear = -1
+  return posts.reduce(
+    (posts: any, post: any) => {
+      const year = new Date(post.date).getFullYear()
+      if (year !== currentYear && !Number.isNaN(year)) {
+        posts.push({
+          isMarked: true,
+          year,
+        })
+        currentYear = year
+      }
+      posts.push(post)
+      return posts
+    },
+    [],
+  )
 }
 
 export async function getIncludedYearPosts(dirName: string) {

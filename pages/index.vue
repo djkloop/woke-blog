@@ -2,7 +2,7 @@
 import { getIncludedYearPosts } from '@/utils/getContent'
 
 // xxx
-await getIncludedYearPosts('home')
+const postList = await getIncludedYearPosts('home')
 </script>
 
 <template>
@@ -10,6 +10,7 @@ await getIncludedYearPosts('home')
     <!-- 首页轮播图 -->
     <HomeSwiper />
     <!-- 首页文章列表 -->
+    <HomeContentList :posts="postList" />
   </section>
 </template>
 
