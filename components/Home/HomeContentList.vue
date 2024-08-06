@@ -12,7 +12,7 @@ const computedPosts = computed(() => {
       title: post.title,
       content: post.description,
       createTime: dayjs(post.date).format('YYYY-MM-DD HH:MM:ss'),
-      tags: post.tags,
+      tags: post?.tags ?? [],
       isPin: post.isPin,
       path: post._path,
 

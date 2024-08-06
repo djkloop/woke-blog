@@ -5,12 +5,10 @@ const path = post.join('/')
 </script>
 
 <template>
-  <section class="relative p4">
+  <section class="markdown-theme-prose slide-enter-content relative p4">
     <ContentDoc :path="path">
       <template #default="{ doc }">
-        <doc-back />
         <doc-render :article="doc" />
-        <doc-toc :toc="doc.body?.toc ?? '没有内容'" />
       </template>
       <template #empty>
         <h1 class="text-center">

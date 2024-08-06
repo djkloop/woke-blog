@@ -16,7 +16,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="h-full xl:block">
+  <div class="h-full">
     <nav>
       <ul>
         <li v-for="(h2, h2Index) in props.toc.links" :key="h2Index" class="relative list-none">

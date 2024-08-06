@@ -13,7 +13,10 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: true },
   css: [
+    '@unocss/reset/tailwind.css',
     '~/assets/main.css',
+    '~/assets/markdown.scss',
+    '~/assets/transition.scss',
   ],
   content: {
     highlight: {

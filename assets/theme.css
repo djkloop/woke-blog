@@ -1,3 +1,13 @@
+:root {
+  /* common var */
+  --woke-common-transition: all 0.3s ease;
+  --woke-common-rd: 0.5em;
+  --woke-common-bg: #69a79429;
+  --woke-common-bd: #c9c7c2;
+
+  font-size: 16px !important;
+}
+
 :root,
 :root[theme-mode='light'] {
   --brand-main: var(--td-brand-color-6);
