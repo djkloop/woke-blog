@@ -81,7 +81,7 @@ const computedReadContentTime = computed(() => {
           >{{ computedTags }}</span>
           <span class="mx-2">·</span>
           <div flex items-center justify-center gap-x-1>
-            <span class="i-hugeicons-clock-01" role="img" aria-hidden="true" />
+            <span class="i-ph-clock-countdown-duotone" role="img" aria-hidden="true" />
             <span>{{ computedReadContentTime }}</span>
           </div>
           <span class="mx-2">·</span>

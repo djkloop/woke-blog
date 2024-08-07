@@ -8,8 +8,8 @@ export const navLinks = [
 ]
 
 export const footerLinks = [
-  { name: '乌鲁木齐', icon: 'i-hugeicons-location-03', path: 'https://ditu.amap.com/search?city=650103' },
-  { name: 'djkloopjs@gmail.com', icon: 'i-hugeicons-mail-love-01', path: 'mailto:djkloopjs@gmail.com' },
+  { name: '乌鲁木齐', icon: 'i-ph-map-pin-area-duotone', path: 'https://ditu.amap.com/search?city=650103' },
+  { name: 'djkloopjs@gmail.com', icon: 'i-ph-microsoft-outlook-logo-duotone', path: 'mailto:djkloopjs@gmail.com' },
 ]
 
 export const blogInfos = {

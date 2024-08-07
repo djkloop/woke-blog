@@ -7,7 +7,7 @@ import { blogInfos, footerLinks } from '@/site.config'
     <div flex flex-col items-center justify-center gap-x-2 text-sm class="color-coolGray-3">
       <div flex gap-x-2>
         <div flex items-center justify-center gap-x-1>
-          <span class="i-hugeicons-copyright" role="img" aria-hidden="true" />
+          <span class="i-ph-copyleft-duotone" role="img" aria-hidden="true" />
           <span>{{ blogInfos.title }}</span>
         </div>
         <span>|</span>
