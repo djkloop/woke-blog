@@ -8,7 +8,7 @@ const path = post.join('/')
   <section class="markdown-theme-prose slide-enter-content relative p4">
     <ContentDoc :path="path">
       <template #default="{ doc }">
-        <doc-render :article="doc" />
+        <DocRender :article="doc" />
       </template>
       <template #empty>
         <h1 class="text-center">
