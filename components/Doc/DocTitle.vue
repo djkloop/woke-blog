@@ -24,7 +24,7 @@ const computedTags = computed(() => {
 <template>
   <div>
     <h1>{{ props.article.title }}</h1>
-    <div class="mb-4em flex items-center gap-x-0.5em op-50">
+    <div class="mb-2em flex items-center gap-x-0.5em op-50">
       <div class="flex items-center">
         <span class="i-ph-calendar-dots-duotone m-r-0.5em" role="img" aria-hidden="true" /> {{ formattedDate }}
       </div>
