@@ -4,7 +4,7 @@ import { blogInfos, navLinks } from '@/site.config'
 </script>
 
 <template>
-  <div class="h100vh" relative flex flex-col items-center justify-center gap-y-4 overflow-hidden>
+  <div class="h100vh" border="1px solid r-coolGray-2 l-0 b-0 t-0" relative flex flex-col items-center justify-center gap-y-4 overflow-hidden>
     <div border="1px solid coolgray-2" h30 w30 flex rotate-y-180deg items-center justify-center overflow-hidden rounded-full p2>
       <img :src="`/images/${blogInfos.logoUrl}`" class="block h20 w20" alt="" srcset="">
     </div>
