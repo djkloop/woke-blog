@@ -18,7 +18,7 @@ onBeforeMount(() => {
 
 <template>
   <NuxtLayout>
-    <NuxtLoadingIndicator color="#777" />
+    <NuxtLoadingIndicator />
     <NuxtPage />
   </NuxtLayout>
 </template>
