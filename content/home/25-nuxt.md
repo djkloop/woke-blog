@@ -269,7 +269,7 @@ defineNuxtLink({
 }) => Component
 ```
 
-如果您想了解更多信息，我建议您直接查看[文档](https://nuxt.com/docs/api/components/nuxt-link)或[源代码](https://github.com/nuxt/nuxt/blob/main/packages/nuxt/src/app/components/nuxt-link.ts)本身。
+如果您想了解更多信息，我建议您直接查看[文档](https://nuxt.com/docs/api/components/nuxt-link){target="\_blank"}或[源代码](https://github.com/nuxt/nuxt/blob/main/packages/nuxt/src/app/components/nuxt-link.ts)本身。
 
 ## 13 . 使用 NuxtLink 预取页面
 
