@@ -10,7 +10,6 @@ import { blogInfos, footerLinks } from '@/site.config'
           <span class="i-ph-copyleft-duotone" role="img" aria-hidden="true" />
           <span>{{ blogInfos.title }}</span>
         </div>
-        <span>|</span>
         <template v-for="link in footerLinks" :key="link.path">
           <span>|</span>
           <div flex items-center justify-center gap-x-1 class="wkLayoutMenuFooterItem">
