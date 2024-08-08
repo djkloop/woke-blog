@@ -14,6 +14,52 @@ onBeforeMount(() => {
     }
   })
 })
+
+useHead({
+  script: [
+    {
+      innerHTML: `
+        import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+        let waline = null;
+
+        function observeElementAppearance(selector) {
+          const observer = new MutationObserver((mutationsList, observer) => {
+              for (const mutation of mutationsList) {
+                  if (mutation.type === 'childList' || mutation.type === 'subtree') {
+                      const element = document.querySelector(selector);
+                      if (element && !waline) {
+                          waline = Waline.init({
+                            el: selector,
+                            serverURL: 'URL_ADDRESS',
+                          });
+                      } else {
+                       if (waline) {
+                          waline.destroy()
+                       }
+                      }
+                  }
+              }
+          });
+
+          observer.observe(document.documentElement, {
+              childList: true,
+              subtree: true
+          });
+      }
+
+        // 假设要监测一个具有特定 ID 的元素
+        observeElementAppearance('#waline');
+
+      `,
+      type: 'module',
+      key: 'waline-comment-script',
+      defer: true,
+      tagPosition: 'bodyClose',
+      async: true,
+    },
+  ],
+})
 </script>
 
 <template>
