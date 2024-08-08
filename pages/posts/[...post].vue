@@ -15,7 +15,7 @@ useHead({
               el: '#waline',
               serverURL: 'https://waline-woke-blog-comment.vercel.app',
             });
-          }. 500)
+          }, 500)
         }
       `,
       type: 'module',
