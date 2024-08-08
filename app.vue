@@ -31,7 +31,7 @@ useHead({
                       if (element && !waline) {
                           waline = init({
                             el: selector,
-                            serverURL: 'URL_ADDRESS',
+                            serverURL: 'https://waline-woke-blog-comment.vercel.app',
                           });
                       } else {
                        if (waline) {
