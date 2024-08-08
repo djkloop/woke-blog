@@ -19,8 +19,6 @@ useHead({
         }
       `,
       type: 'module',
-      defer: true,
-      async: true,
       key: 'waline-comment-script',
     },
   ],
