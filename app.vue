@@ -22,21 +22,23 @@ useHead({
         import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
 
         let waline = null;
-
+        let isInit = true
         function observeElementAppearance(selector) {
           const observer = new MutationObserver((mutationsList, observer) => {
               for (const mutation of mutationsList) {
                   if (mutation.type === 'childList' || mutation.type === 'subtree') {
                       const element = document.querySelector(selector);
-                      if (element && !waline) {
+                      if (element && !waline && isInit) {
                           waline = init({
                             el: selector,
                             serverURL: 'https://waline-woke-blog-comment.vercel.app',
                           });
+                          isInit = false
                       } else {
                        if (waline) {
                           waline.destroy()
                           waline = null
+                          isInit = true
                        }
                       }
                   }
