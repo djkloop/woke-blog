@@ -23,6 +23,7 @@ useHead({
       type: 'module',
       key: 'waline-comment-script',
       defer: true,
+      tagPosition: 'bodyClose',
       async: true,
     },
   ],
