@@ -10,10 +10,12 @@ useHead({
         import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
 
         window.onload = () => {
-          init({
-            el: '#waline',
-            serverURL: 'https://waline-woke-blog-comment.vercel.app',
-          });
+          setTimeout(() => {
+            init({
+              el: '#waline',
+              serverURL: 'https://waline-woke-blog-comment.vercel.app',
+            });
+          }. 500)
         }
       `,
       type: 'module',
