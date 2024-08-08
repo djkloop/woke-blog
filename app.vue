@@ -36,6 +36,7 @@ useHead({
                       } else {
                        if (waline) {
                           waline.destroy()
+                          waline = null
                        }
                       }
                   }
