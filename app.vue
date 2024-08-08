@@ -12,6 +12,8 @@ useHead({
 
         window.onload = () => {
           setTimeout(() => {
+            const el = document.getElementById('waline');
+            if (!el) return;
             init({
               el: '#waline',
               serverURL: 'https://waline-woke-blog-comment.vercel.app',
