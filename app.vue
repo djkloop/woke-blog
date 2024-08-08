@@ -29,7 +29,7 @@ useHead({
                   if (mutation.type === 'childList' || mutation.type === 'subtree') {
                       const element = document.querySelector(selector);
                       if (element && !waline) {
-                          waline = Waline.init({
+                          waline = init({
                             el: selector,
                             serverURL: 'URL_ADDRESS',
                           });
