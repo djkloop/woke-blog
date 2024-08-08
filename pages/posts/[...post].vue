@@ -2,6 +2,26 @@
 const route = useRoute()
 const post = route.params.post as Array<string>
 const path = post.join('/')
+
+useHead({
+  script: [
+    {
+      innerHTML: `
+        import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+        init({
+          el: '#waline',
+          serverURL: 'https://waline-woke-blog-comment.vercel.app',
+        });
+      
+      `,
+      type: 'module',
+      defer: true,
+      async: true,
+      key: 'waline-comment-script',
+    },
+  ],
+})
+//
 </script>
 
 <template>
@@ -9,6 +29,7 @@ const path = post.join('/')
     <ContentDoc :path="path">
       <template #default="{ doc }">
         <DocRender :article="doc" />
+        <div id="waline" />
       </template>
       <template #empty>
         <h1 class="text-center">

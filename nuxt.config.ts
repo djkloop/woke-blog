@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@tdesign-vue-next/nuxt',
     '@nuxt/eslint',
+    '@nuxt/scripts',
   ],
   devtools: { enabled: true },
   css: [
@@ -41,6 +42,9 @@ export default defineNuxtConfig({
       bodyAttrs: {
         class: 'font-sans',
       },
+      link: [
+        { rel: 'stylesheet', href: 'https://unpkg.com/@waline/client@v3/dist/waline.css' },
+      ],
     },
   },
   content: {
