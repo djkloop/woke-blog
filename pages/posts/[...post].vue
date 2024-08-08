@@ -1,41 +1,13 @@
 <script setup lang="ts">
+import { Waline } from '@waline/client/component'
+import '@waline/client/style'
+
 const route = useRoute()
 const post = route.params.post as Array<string>
 const path = post.join('/')
 
-useHead({
-  script: [
-    {
-      innerHTML: `
-        import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
-
-        window.onload = () => {
-          setTimeout(() => {
-            const el = document.getElementById('waline');
-            if (!el) return;
-            init({
-              el: '#waline',
-              serverURL: 'https://waline-woke-blog-comment.vercel.app',
-            });
-          }, 500)
-        }
-
-        // 监听自定义的事件
-        window.addEventListener("pushState", function (e) {
-            console.info("pushState",e.stateInfo);
-        })
-        window.addEventListener("replaceState", function (e) {
-            console.info("replaceState",e.stateInfo);
-        })
-      `,
-      type: 'module',
-      key: 'waline-comment-script',
-      defer: true,
-      tagPosition: 'bodyClose',
-      async: true,
-    },
-  ],
-})
+const serverURL = 'https://waline-woke-blog-comment.vercel.app'
+const xPath = computed(() => useRoute().path)
 //
 </script>
 
@@ -48,7 +20,9 @@ useHead({
             <DocRender :article="doc" />
           </div>
         </div>
-        <div id="waline" class="fixed right-20px top-20px" />
+        <div id="waline" class="fixed right-20px top-20px">
+          <Waline :server-u-r-l="serverURL" :path="xPath" />
+        </div>
       </template>
       <template #empty>
         <h1 class="text-center">
