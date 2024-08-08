@@ -22,6 +22,8 @@ useHead({
       `,
       type: 'module',
       key: 'waline-comment-script',
+      defer: true,
+      async: true,
     },
   ],
 })
