@@ -19,6 +19,14 @@ useHead({
             });
           }, 500)
         }
+
+        // 监听自定义的事件
+        window.addEventListener("pushState", function (e) {
+            console.info("pushState",e.stateInfo);
+        })
+        window.addEventListener("replaceState", function (e) {
+            console.info("replaceState",e.stateInfo);
+        })
       `,
       type: 'module',
       key: 'waline-comment-script',
