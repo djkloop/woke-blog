@@ -13,7 +13,7 @@ export const footerLinks = [
 ]
 
 export const blogInfos = {
-  title: '蜗壳 - 一名碎碎念的前端开发工程师博客',
+  title: '蜗壳',
   logoUrl: 'logo/logo_wk_x.png',
   description: '讲文明，树新风，扬正气，促和谐，谱新篇。',
   seoDescription: '前端博客，摄影师博客，一些碎碎念。',
