@@ -13,10 +13,11 @@ export const footerLinks = [
 ]
 
 export const blogInfos = {
-  title: '蜗壳',
+  title: '蜗壳 - 一名碎碎念的前端开发工程师博客',
   logoUrl: 'logo/logo_wk_x.png',
   description: '讲文明，树新风，扬正气，促和谐，谱新篇。',
   seoDescription: '前端博客，摄影师博客，一些碎碎念。',
+  keywords: 'JavaScript, Nuxt3, 网站开发, 休眠设置, 照片分享, 文章推荐, 电脑使用技巧, 现代博客',
   lang: 'zh-CN',
   author: 'djkloop',
 }

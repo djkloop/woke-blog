@@ -24,6 +24,7 @@ export default defineNuxtConfig({
   app: {
     rootId: 'nuxt-root',
     head: {
+      title: blogInfos.title,
       meta: [
         { name: 'description', content: blogInfos.seoDescription },
         { name: 'author', content: blogInfos.author },
@@ -32,6 +33,7 @@ export default defineNuxtConfig({
         { name: 'msapplication-TileColor', content: '#ffffff' },
         { charset: 'UTF-8' },
         { 'http-equiv': 'X-UA-Compatible', 'content': 'IE=edge' },
+        { name: 'keywords', content: blogInfos.keywords },
       ],
       noscript: [
         { children: 'JavaScript is required' },
@@ -42,9 +44,6 @@ export default defineNuxtConfig({
       bodyAttrs: {
         class: 'font-sans',
       },
-      link: [
-        { rel: 'stylesheet', href: 'https://unpkg.com/@waline/client@v3/dist/waline.css' },
-      ],
     },
   },
   content: {
